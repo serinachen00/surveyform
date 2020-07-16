@@ -32,7 +32,7 @@ function doAjax() {
     if(fname != '' && lname !=''){
     //if($('input:required') != ''){
 
-    window.location.href= '../newmod/dataresult.html';
+    window.location.href= 'newmod/dataresult.html';
     }
 
     else {
