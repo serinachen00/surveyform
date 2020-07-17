@@ -4,10 +4,93 @@
     <meta charset="UTF-8">
     <title>Result</title>
 </head>
-<body>
-<h1 align="center">Thank you for taking the survey!</h1>
 
-<div class="container">
+<!-- navbar -->
+<div class="fixed-top">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h5 class="text-white h4">SURVEY IT</h5>
+            <span class="text-muted">The next way to survey.</span>
+
+            <div><a href="#" class="text-white" >Back</a> </div>
+        </div>
+
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</div>
+
+<body>
+
+
+<div class="container" style="margin-top: 80px">
+
+    <h1 align="left">Thank you for taking the survey!</h1>
+    <p>  Your response is very important to us. </p>
+    <p style="font-size: 20px; font: bold;">  Confirmation number: 5546379273435483 </p>
+    <br> <p>  Below is your input: </p>
+
+    <div style="color: #313cff; font-family: Serif">
+        <div id = "userfirst" >  </div>
+        <div id = "userlast"  >  </div>
+        <div id = "dob" >  </div>
+        <p  style="display: inline" id = "hft" > </p>
+        <p  style="display: inline" id = "hi"> </p>
+        <div id = "education" >  </div>
+        <div id = "phone" >  </div>
+        <div id = "email" >  </div>
+        <p  style="display: inline" id = "address1"> </p>
+        <p  style="display: inline" id = "address2"> </p>
+        <p  style="display: inline" id = "city"> </p>
+        <p  style="display: inline" id = "state"> </p>
+        <p  style="display: inline" id = "zipcode"> </p>
+
+    </div>
+
+
+    <script>
+
+        display();
+        function display() {
+
+            var first = sessionStorage.getItem('firstname');
+            var last = sessionStorage.getItem('lastname');
+            var dob = sessionStorage.getItem('dob');
+            var hft = sessionStorage.getItem('hft');
+            var hi = sessionStorage.getItem('hi');
+            var edu = sessionStorage.getItem('edu');
+            var ph = sessionStorage.getItem('ph');
+            var emil = sessionStorage.getItem('emil');
+            var add1 = sessionStorage.getItem('add1');
+            var add2 = sessionStorage.getItem('add2');
+            var ct = sessionStorage.getItem('city');
+            var stat = sessionStorage.getItem('state');
+            var zip = sessionStorage.getItem('zip');
+
+
+            document.getElementById('userfirst').innerHTML = "First Name: " + first ;
+            document.getElementById('userlast').innerHTML = "Last Name: " +  last;
+            document.getElementById('dob').innerHTML = "Date of Birth: " +  dob;
+            document.getElementById('hft').innerHTML = "Height: " +  hft + " feet";
+            document.getElementById('hi').innerHTML =  hi + " inches";
+            document.getElementById('education').innerHTML = "Education level: " +  edu;
+            document.getElementById('phone').innerHTML = "Phone Number: " +  ph;
+            document.getElementById('email').innerHTML = "Email: " +  emil;
+            document.getElementById('address1').innerHTML = "Address: " +  add1;
+            document.getElementById('address2').innerHTML =  add2;
+            document.getElementById('city').innerHTML = ", " +  ct;
+            document.getElementById('state').innerHTML = ", " +  stat;
+            document.getElementById('zipcode').innerHTML = ", " +  zip;
+
+
+
+        }
+
+    </script>
+
  <div id="googleMap" style="width:100%;height:400px;">
 
 </div>
@@ -22,9 +105,16 @@
         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
     }
 
+
+
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0_jZgDE6q76UZAL90qkZgQrR8UlwW3nE&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0_jZgDE6q76UZAL90qkZgQrR8UlwW3nE&callback=myMap">
+
+
+
+
+</script>
 
 
 
@@ -40,5 +130,5 @@
 
 <script src="https://www.google.com/recaptcha/api/siteverify"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+<script src="data.js"></script>
 </html>
