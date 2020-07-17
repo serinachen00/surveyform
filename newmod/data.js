@@ -6,7 +6,7 @@ $(document).ready(function()  {
  $('#submit').click((event)=> {
 
     //stop submit the form, we will post it manually.
-    event.preventDefault();
+    //event.preventDefault();
     doAjax();
 
 });
@@ -51,7 +51,8 @@ function doAjax() {
 
 
 
-    if(fname != '' && lname !=''){
+    if(fname != '' && lname !='' && dobb != '' && phh != '' && emill != '' && add11 != '' && cityy!= '' && statee != '' & zipp != ''){
+
     //if($('input:required') != ''){
      window.location.href= 'newmod/dataresult.html';
 
@@ -59,9 +60,9 @@ function doAjax() {
 
     }
 
-    else {
+    /*else {
         alert("please input your field");
-    }
+    }*/
 
    // output.innerHTML = htmlstring;
    /* $('#userinput').html('First Name: '+ sessionStorage.getItem('firstname'));

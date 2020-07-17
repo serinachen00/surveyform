@@ -37,11 +37,11 @@
     <div class="form-row">
          <div class="form-group col-md-6">
             <label for="first"><span style="color: red">*</span>First Name</label>
-             <input  class="form-control" id= "first" placeholder="John" maxlength="4" size="4" required>
+             <input  class="form-control" id= "first" placeholder="John" maxlength="40" size="40" required>
         </div>
         <div class="form-group col-md-6">
             <label for="last"><span style="color: red">*</span>Last Name</label>
-            <input  class="form-control" id= "last" placeholder="Smith"  maxlength="4" size="4" required>
+            <input  class="form-control" id= "last" placeholder="Smith"  maxlength="40" size="40" required>
         </div>
     </div>
 
@@ -49,17 +49,17 @@
 
     <div class="form-group col-md-4">
         <label for="inputAddress2"><span style="color: red">*</span>Date of Birth</label>
-        <input type="text" class="form-control" id="dobb" placeholder="MM/DD/YYYY" >
+        <input type="date" class="form-control" id="dobb" placeholder="MM/DD/YYYY" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" required>
     </div>
 
         <div class="form-group col-md-2">
             <label for="inputAddress2">Height</label>
-            <input type="text" class="form-control" id="hftt" placeholder="ft">
+            <input type="number" class="form-control" id="hftt" placeholder="ft">
         </div>
 
         <div class="form-group col-md-2">
             <label for="inputAddress2">&nbsp</label>
-            <input type="text" class="form-control" id="hii" placeholder="inches">
+            <input type="number" class="form-control" id="hii" placeholder="inches" >
         </div>
     </div>
 
@@ -76,12 +76,12 @@
  <br>
     <div class="form-group">
         <label for="inputAddress2"><span style="color: red">*</span>Phone</label>
-        <input type="number" class="form-control" id="phone" placeholder="000 000 0000" maxlength="7" minlength="7">
+        <input type="text" class="form-control" id="phone" placeholder="000-0000" pattern="[0-9]{7}" required>
     </div>
 
     <div class="form-group">
         <label for="inputAddress2"><span style="color: red">*</span>Email</label>
-        <input type="email" class="form-control" id="email" placeholder="johnsmith@gmail.com" >
+        <input type="email" class="form-control" id="email" placeholder="johnsmith@gmail.com" required>
     </div>
 
     <div class="form-group">
@@ -93,7 +93,7 @@
 
     <div class="form-group">
         <label for="address1"><span style="color: red">*</span>Address</label>
-        <input type="text" class="form-control" id="address1" placeholder="1234 Main St" >
+        <input type="text" class="form-control" id="address1" placeholder="1234 Main St" required>
     </div>
     <div class="form-group">
         <label for="address2">Address 2</label>
@@ -104,17 +104,17 @@
 
             <div class="form-group col-md-4">
                 <label for="inputAddress2"><span style="color: red">*</span>City</label>
-                <input type="text" class="form-control" id="city" placeholder="San Francisco" >
+                <input type="text" class="form-control" id="city" placeholder="San Francisco" required>
             </div>
 
             <div class="form-group col-md-4">
                 <label for="inputAddress2"><span style="color: red">*</span>State</label>
-                <input type="text" class="form-control" id="state" placeholder="CA">
+                <input type="text" class="form-control" id="state" placeholder="CA" minlength="2" maxlength="2" required>
             </div>
 
             <div class="form-group col-md-4">
                 <label for="inputAddress2">Postal/Zip code</label>
-                <input type="text" class="form-control" id="zipcode" placeholder="94000">
+                <input type="text" class="form-control" id="zipcode" placeholder="94000" pattern="[0-9]{5}" required>
             </div>
         </div>
 
