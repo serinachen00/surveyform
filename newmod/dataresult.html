@@ -28,28 +28,33 @@
 
 <div class="container" style="margin-top: 80px">
 
-    <h1 align="left">Thank you for taking the survey!</h1>
-    <p>  Your response is very important to us. </p>
-    <p style="font-size: 20px; font: bold;">  Confirmation number: 5546379273435483 </p>
-    <br> <p>  Below is your input: </p>
+    <h1 align="left">Results verification page <strong>Shiuan Chen</strong></h1>
+    <p>  Thank you for taking the survey! Your response is very important to us. </p>
+    <strong style="font-size: 20px">  Confirmation number: 5546379273435483 </strong>
 
-    <div style="color: #313cff; font-family: Serif">
-        <div id = "userfirst" >  </div>
-        <div id = "userlast"  >  </div>
-        <div id = "dob" >  </div>
-        <p  style="display: inline" id = "hft" > </p>
-        <p  style="display: inline" id = "hi"> </p>
-        <div id = "education" >  </div>
-        <div id = "phone" >  </div>
-        <div id = "email" >  </div>
-        <p  style="display: inline" id = "address1"> </p>
-        <p  style="display: inline" id = "address2"> </p>
-        <p  style="display: inline" id = "city"> </p>
-        <p  style="display: inline" id = "state"> </p>
-        <p  style="display: inline" id = "zipcode"> </p>
+    <br><br>
+
+    <div style="border-style: groove;">
+        <strong> Here is what you submitted:     </strong>   <hr>
+        <div style="color: #313cff; font-family: Serif">
+            <div id = "userfirst" >  </div>
+            <div id = "userlast"  >  </div>
+            <div id = "dob" >  </div>
+            <p  style="display: inline" id = "hft" > </p>
+            <p  style="display: inline" id = "hi"> </p>
+            <div id = "education" >  </div>
+            <div id = "phone" >  </div>
+            <div id = "email" >  </div>
+            <p  style="display: inline" id = "address1"> </p>
+            <p  style="display: inline" id = "address2"> </p>
+            <p  style="display: inline" id = "city"> </p>
+            <p  style="display: inline" id = "state"> </p>
+            <p  style="display: inline" id = "zipcode"> </p>
+        </div>
 
     </div>
-
+    <br>
+    <p> The map below specifies your address: </p>
 
     <script>
 
@@ -99,10 +104,32 @@
 <script>
     function myMap() {
         var mapProp= {
-            center:new google.maps.LatLng(51.508742,-0.120850),
+            center:new google.maps.LatLng(36.7783,-119.4179),
             zoom:5,
         };
         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+        marker = new google.maps.Marker();
+        marker.setPosition(map.center);
+      //  marker.setDraggable(true);
+        //set the marker on map with .setMap()
+        marker.setMap(map);
+
+       //  marker.addListener("dragend", function() {
+      //  map.setCenter(marker.getPosition());
+//     let url =
+//       "/getAddress?lat=" +
+//       marker.getPosition().lat() +
+//       "&lng=" +
+//       marker.getPosition().lng();
+//     fetch(url)
+//       .then(res => res.json())
+//       .then(data => {
+//         console.log(data);
+//         document.getElementById("search-input").value =
+//           data.results[0].formatted_address;
+//       });
+//   });
     }
 
 
